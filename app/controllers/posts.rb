@@ -1,5 +1,5 @@
 class Posts < Application
-  # provides :xml, :yaml, :js
+   provides :xml
 
   def index
     @posts = Post.all
