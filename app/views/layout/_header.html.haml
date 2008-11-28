@@ -1,0 +1,20 @@
+!!! XML
+!!!
+%html
+  %head
+    %title dragon.blog
+    = css_include_tag :layout, :html, :light, :dark
+  %body
+    .content
+      .width#header
+        %img{:src => 'images/logo.gif'}
+        %ul
+          %li
+            = link_to('Home', resource(:posts))
+          %li
+            = link_to('About us', '#')
+          %li
+            = link_to('Streaming Video', '#')
+          %li
+            = link_to('RSS', resource(:posts, :format => 'xml'))
+      .width#headerImg
