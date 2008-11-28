@@ -7,5 +7,8 @@ class Post
   property :body, Text
   property :created_at, DateTime
   property :updated_at, DateTime, :default => nil
+  
+  
+  validates_present :title, :body
 
 end

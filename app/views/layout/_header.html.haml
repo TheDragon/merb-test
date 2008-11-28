@@ -5,6 +5,7 @@
     %title dragon.blog
     = css_include_tag :layout, :html, :light, :dark
   %body
+    = js_include_tag :jquery, :application
     .content
       .width#header
         %img{:src => 'images/logo.gif'}
@@ -14,7 +15,10 @@
           %li
             = link_to('About us', '#')
           %li
-            = link_to('Streaming Video', '#')
+            - unless session.user.nil?
+              = link_to('Log Out', :logout)
+            - else
+              = link_to('Log In', :login)
           %li
             = link_to('RSS', resource(:posts, :format => 'xml'))
       .width#headerImg

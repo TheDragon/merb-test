@@ -1,11 +1,16 @@
 class Posts < Application
-   provides :xml
+  before :ensure_authenticated, :exclude => [:show, :index]
+  provides :xml
 
   def index
     @posts = Post.all.reverse
     display @posts
   end
 
+  def admin
+    
+  end
+  
   def show(id)
     @post = Post.get(id)
     raise NotFound unless @post
@@ -45,7 +50,7 @@ class Posts < Application
     end
   end
 
-  def destroy(id)
+  def delete(id)
     @post = Post.get(id)
     raise NotFound unless @post
     if @post.destroy

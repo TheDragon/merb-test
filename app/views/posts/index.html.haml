@@ -9,10 +9,19 @@
         = post.created_at.strftime('%b')
       %span{:class => 'day style6'} 
         = post.created_at.day
+      %span{:class => 'month'}
+        = post.created_at.strftime('%H:%M')
     %p
       %span{:class => 'title'} 
         = link_to post.title, resource(post)
       = post.body
+      - unless session.user.nil?
+        %p
+          %sub
+            %em
+              = link_to 'Edit', resource(post, :edit)
+              ||
+              = link_to 'Delete', resource(post, :delete), :class => 'delete'
     -unless post.updated_at = post.created_at
       %p
         %sub
