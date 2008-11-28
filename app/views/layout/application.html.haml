@@ -1,0 +1,66 @@
+!!! XML
+!!!
+%html
+  %head
+    %title dragon.blog
+    = css_include_tag :layout, :html, :light, :dark
+  %body
+    .content
+      .width#header
+        %img{:src => 'images/logo.gif'}
+        %ul
+          %li
+            = link_to('Home', resource(:posts))
+          %li
+            = link_to('About us', '#')
+          %li
+            = link_to('Streaming Video', '#')
+          %li
+            = link_to('RSS', resource(:posts, :format => 'xml'))
+      .width#headerImg
+      .width#menu
+        %ul
+          %li
+            %a{:href => '', :onfocus => 'blur()'}
+              %span{:class => 'title '} Projects
+              %span{:class => 'desc'} View the various projects I'm working on.
+          %li
+            %a{:href => '', :onfocus => 'blur()'}
+              %span{:class => 'title '} Webcam
+              %span{:class => 'desc'} Spy on me while I plyt world domination.
+          %li
+            %a{:href => '', :onfocus => 'blur()'}
+              %span{:class => 'title '} Resume
+              %span{:class => 'desc'} The lives I've touched in the business world.
+          %li
+            %a{:href => '', :onfocus => 'blur()'}
+              %span{:class => 'title '} Personal Feeds
+              %span{:class => 'desc'} The rss feeds that have given me reason to follow.
+      #page
+        .widthPad#columns
+          %div{:class => 'floatLeft width73'}
+            = catch_content :for_layout
+          %div{:class => 'floatRight width25 lightBlueBg horzPad'}
+            %h2 Example heading
+            %ul{:class => 'submenu1'}
+              %li
+                = link_to('This is a link', '#')
+              %li
+                = link_to('This is another link', '#')
+            %h3 Another example
+            %ul{:class => 'submenu2'}
+              %li
+                = link_to('This is a link', '#')
+                = link_to('This is another link', '#')
+    #footer
+      .width#bg
+        %img{:src => 'images/logo.gif'}
+        %ul
+          %li
+            = link_to('Sitemap', '#')
+          %li
+            = link_to('Register', '#')
+          %li
+            = link_to('opensourcetemplates.org', 'http://www.opensourcetemplates.org')
+          %li
+            = link_to('studio7designs.com', 'http://www.studio7designs.com')

@@ -2,7 +2,7 @@ class Posts < Application
    provides :xml
 
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse
     display @posts
   end
 
