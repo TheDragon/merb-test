@@ -1,18 +1,18 @@
 -if @posts.empty?
   .post
-    %span{:class => 'post'} No Posts Found.
+    %span.post No Posts Found.
 
 -@posts.each do |post|
   .post
     .date
-      %span{:class => 'month'} 
+      %span.month
         = post.created_at.strftime('%b')
-      %span{:class => 'day style6'} 
+      %span.day.style6
         = post.created_at.day
-      %span{:class => 'month'}
+      %span.month
         = post.created_at.strftime('%H:%M')
     %p
-      %span{:class => 'title'} 
+      %span.title
         = link_to post.title, resource(post)
       = post.body
       - unless session.user.nil?

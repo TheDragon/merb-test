@@ -3,23 +3,23 @@
   %ul
     %li
       %a{:href => '', :onfocus => 'blur()'}
-        %span{:class => 'title '} Projects
-        %span{:class => 'desc'} View the various projects I'm working on.
+        %span.title Projects
+        %span.desc View the various projects I'm working on.
     %li
       %a{:href => '', :onfocus => 'blur()'}
-        %span{:class => 'title '} Webcam
-        %span{:class => 'desc'} Spy on me while I plot world domination.
+        %span.title Webcam
+        %span.desc Spy on me while I plot world domination.
     %li
       %a{:href => '', :onfocus => 'blur()'}
-        %span{:class => 'title '} Resume
-        %span{:class => 'desc'} The lives I've touched in the business world.
+        %span.title Resume
+        %span.desc The lives I've touched in the business world.
     %li
       %a{:href => '', :onfocus => 'blur()'}
-        %span{:class => 'title '} Personal Feeds
-        %span{:class => 'desc'} The rss feeds that have given me reason to follow.
+        %span.title Personal Feeds
+        %span.desc The rss feeds that have given me reason to follow.
 #page
   .widthPad#columns
-    %div{:class => 'floatLeft width73'}
+    %div.floatLeft.width73
       = catch_content :for_layout
     = partial 'layout/rightmenu'
 = partial 'layout/footer'
